@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/14 21:56:42 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/01/14 22:17:38 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/01/14 23:07:36 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int _numBits = 8;
 
 Fixed::Fixed(void)
 {
+	_fixedPointValue = 0;
 	std::cout << "Default constructor called" << std::endl;
 	return;
 }
