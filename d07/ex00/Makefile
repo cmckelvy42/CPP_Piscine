@@ -6,13 +6,13 @@
 #    By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/13 10:54:58 by cmckelvy          #+#    #+#              #
-#    Updated: 2020/01/23 18:40:27 by cmckelvy         ###   ########.fr        #
+#    Updated: 2020/01/23 19:41:48 by cmckelvy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 MEGA = whatever
 
-SRC = main.cpp
+SRC = whatever.cpp
 
 CPP = clang++
 CFLAGS = -Wall -Wextra -Werror

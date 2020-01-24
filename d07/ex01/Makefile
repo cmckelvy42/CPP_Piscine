@@ -6,13 +6,13 @@
 #    By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/01/13 10:54:58 by cmckelvy          #+#    #+#              #
-#    Updated: 2020/01/23 18:40:27 by cmckelvy         ###   ########.fr        #
+#    Updated: 2020/01/23 19:41:40 by cmckelvy         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-MEGA = whatever
+MEGA = iter
 
-SRC = main.cpp
+SRC = iter.cpp
 
 CPP = clang++
 CFLAGS = -Wall -Wextra -Werror
@@ -21,7 +21,7 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(MEGA)
 
 $(MEGA):
-	@echo "\033[32mmaking whatever...\033[0m"
+	@echo "\033[32mmaking iter...\033[0m"
 	@$(CPP) $(CFLAGS) -o $(MEGA) $(SRC)
 
 .PHONY: clean
