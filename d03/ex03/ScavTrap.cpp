@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/10 20:39:07 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/05/18 12:33:31 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/06/12 19:21:30 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,8 @@
 					"Backup your memory"}
 #define CHAL_NUM 5
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
+ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 100, 50, 50, 1, 20, 15, 3)
 {
-	_HP = 100;
-	_maxHP = 100;
-	_MP = 50;
-	_maxMP = 50;
-	_level = 1;
-	_meleeDamage = 20;
-	_rangedDamage = 15;
-	_armor = 3;
 	std::cout << "Hey everybody! Check out my package!" << std::endl;
 	srand(time(NULL));
 }
@@ -42,20 +34,18 @@ ScavTrap::~ScavTrap()
 	return;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &other)
-{
-	std::cout << "ScavTrap copy constructor called" << std::endl;
-	*this = other;
-	return;
-}
+ScavTrap::ScavTrap(const ScavTrap &other) : ClapTrap(other)
+{ *this = other; }
 
 ScavTrap&	ScavTrap::operator = (const ScavTrap &other)
 {
 	if (this != &other)
+	{
 		_name = other.getName();
 		_level = other.getLevel();
 		_HP = other.getHP();
 		_MP = other.getMP();
+	}
 	std::cout << "I am so impressed with myself!" << std::endl;
 	return (*this);
 }

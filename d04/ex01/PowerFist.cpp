@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PowerFist.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/19 11:23:12 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/06/24 19:15:57 by cmckelvy         ###   ########.fr       */
+/*   Created: 2020/06/30 14:53:06 by cmckelvy          #+#    #+#             */
+/*   Updated: 2020/06/30 14:55:17 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sorcerer.hpp"
-#include "Peon.hpp"
-#include <iostream>
+#include "PowerFist.hpp"
 
-int main(void)
+PowerFist::PowerFist(void) : AWeapon("Power Fist", 8, 50) { }
+PowerFist::PowerFist(const PowerFist &cpy) : AWeapon(cpy) { }
+PowerFist::~PowerFist(void) { }
+
+void	PowerFist::attack(void) const
 {
-    Sorcerer robert("Robert", "the Magnificent");
-    Victim jim("Jimmy");
-    Peon joe("Joe");
-    std::cout << robert << jim << joe;
-    robert.polymorph(jim);
-    robert.polymorph(joe);
-    return 0;
-
+	std::cout << "“* pschhh... SBAM! *" << std::endl;
 }

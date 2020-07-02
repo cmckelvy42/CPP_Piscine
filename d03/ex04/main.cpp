@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/18 11:37:22 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/05/24 19:41:01 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/06/10 19:16:07 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,14 +72,14 @@ int		main()
 	FragTrap ft = FragTrap("Test");
 
 	std::cout << "SUPER TRAP" << std::endl;
-	std::cout << "SuperTrap" << std::endl;
 	SuperTrap super = SuperTrap("Superman");
-	std::cout << "HP is " << super.getHP() << std::endl;
-	std::cout << "EP is " << super.getMP() << std::endl;
-	super.rangedAttack("Steven");
-	super.meleeAttack("Alex");
-	super.vaulthunter_dot_exe("Andy");
-	super.ninjaShoebox(ft);
+	SuperTrap st = super;
+	std::cout << "HP is " << st.getHP() << std::endl;
+	std::cout << "EP is " << st.getMP() << std::endl;
+	st.rangedAttack("Steven");
+	st.meleeAttack("Alex");
+	st.vaulthunter_dot_exe("Andy");
+	st.ninjaShoebox(ft);
 
 	return (0);
 }

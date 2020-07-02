@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/24 17:57:12 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/05/24 19:34:45 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/06/12 19:30:10 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,6 @@
 
 class NinjaTrap : virtual public ClapTrap
 {
-	private:
-		int	_MP;
-		int	_maxMP;
-		int	_meleeDamage;
 	public:
 		NinjaTrap(std::string name);
 		NinjaTrap(void);

@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   SuperMutant.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/19 11:23:12 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/06/24 19:15:57 by cmckelvy         ###   ########.fr       */
+/*   Created: 2020/06/30 14:44:40 by cmckelvy          #+#    #+#             */
+/*   Updated: 2020/07/01 14:22:52 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sorcerer.hpp"
-#include "Peon.hpp"
-#include <iostream>
+#ifndef SUPERMUTANT_HPP
+# define SUPERMUTANT_HPP
+#include "Enemy.hpp"
 
-int main(void)
+class SuperMutant : public Enemy
 {
-    Sorcerer robert("Robert", "the Magnificent");
-    Victim jim("Jimmy");
-    Peon joe("Joe");
-    std::cout << robert << jim << joe;
-    robert.polymorph(jim);
-    robert.polymorph(joe);
-    return 0;
+	public:
+		SuperMutant(void);
+		SuperMutant(const SuperMutant &cpy);
+		virtual ~SuperMutant(void);
+		
+		using Enemy::operator=;
 
-}
+		void 	takeDamage(int dmg);
+};
+#endif

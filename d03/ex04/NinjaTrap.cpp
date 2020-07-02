@@ -6,25 +6,14 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/24 18:00:46 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/05/24 19:53:18 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/06/12 19:20:51 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "NinjaTrap.hpp"
 
-NinjaTrap::NinjaTrap(std::string name) : ClapTrap(name)
-{
-	_name = name;
-	_HP = 60;
-	_maxHP = 60;
-	_MP = 120;
-	_maxMP = 120;
-	_level = 1;
-	_meleeDamage = 60;
-	_rangedDamage = 5;
-	_armor = 0;
-	std::cout << "Nin nin" << std::endl;
-}
+NinjaTrap::NinjaTrap(std::string name) : ClapTrap(name, 60, 60, 120, 120, 1, 60, 5, 0)
+{ std::cout << "Nin nin" << std::endl; }
 NinjaTrap::NinjaTrap(void) { }
 NinjaTrap::NinjaTrap(const NinjaTrap &cpy) : ClapTrap(cpy) { *this = cpy; }
 NinjaTrap::~NinjaTrap(void) { std::cout << "I vanish into the darkness" << std::endl; }
@@ -35,10 +24,12 @@ int			NinjaTrap::getMeleeDamage(void)	const	{ return (_meleeDamage); }
 NinjaTrap&	NinjaTrap::operator = (const NinjaTrap &other)
 {
 	if (this != &other)
+	{
 		_name = other.getName();
 		_level = other.getLevel();
 		_HP = other.getHP();
 		_MP = other.getMP();
+	}
 	std::cout << "Seeing double!" << std::endl;
 	return (*this);
 }

@@ -6,11 +6,12 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/19 11:05:34 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/05/19 11:39:19 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/06/24 17:29:45 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Sorcerer.hpp"
+#include "Victim.hpp"
 
 #define PRINT(x) std::cout << x << std::endl;
 

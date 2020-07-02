@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/09 18:03:02 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/05/18 11:39:59 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/06/12 19:22:47 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,22 @@
 class ClapTrap
 {
 	protected:
+		std::string	_name;
 		int			_HP;
 		int			_maxHP;
 		int			_MP;
 		int			_maxMP;
 		int			_level;
-		std::string	_name;
 		int			_meleeDamage;
 		int			_rangedDamage;
 		int			_armor;
 	
 	public:
 		ClapTrap(std::string name);
+		ClapTrap(const std::string name, unsigned int HP,
+		unsigned int maxHP, unsigned int MP, unsigned int maxMP,
+		unsigned int level, unsigned int meleeDmg, unsigned int rangedDmg,
+		unsigned int armor);
 		ClapTrap(void);
 		~ClapTrap(void);
 		ClapTrap(const ClapTrap &other);

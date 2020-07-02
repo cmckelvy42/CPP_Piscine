@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/09 18:03:02 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/05/24 19:31:19 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/06/12 19:30:28 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,6 @@
 
 class FragTrap : virtual public ClapTrap
 {
-	private:
-		int	_HP;
-		int	_maxHP;
-		int	_rangedDamage;
-		int	_armor;
 	public:
 		FragTrap(std::string name);
 		FragTrap(void);

@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PowerFist.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/19 11:23:12 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/06/24 19:15:57 by cmckelvy         ###   ########.fr       */
+/*   Created: 2020/06/30 14:44:40 by cmckelvy          #+#    #+#             */
+/*   Updated: 2020/06/30 14:52:55 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sorcerer.hpp"
-#include "Peon.hpp"
-#include <iostream>
+#ifndef POWERFIST_HPP
+# define POWERFIST_HPP
+#include "AWeapon.hpp"
 
-int main(void)
+class PowerFist : public AWeapon
 {
-    Sorcerer robert("Robert", "the Magnificent");
-    Victim jim("Jimmy");
-    Peon joe("Joe");
-    std::cout << robert << jim << joe;
-    robert.polymorph(jim);
-    robert.polymorph(joe);
-    return 0;
+	public:
+		PowerFist(void);
+		PowerFist(const PowerFist &cpy);
+		virtual ~PowerFist(void);
+		
+		using AWeapon::operator=;
 
-}
+		void 	attack()	const;
+};
+#endif

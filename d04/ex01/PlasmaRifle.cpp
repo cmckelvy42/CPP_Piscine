@@ -1,27 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   PlasmaRifle.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/19 11:23:12 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/06/24 19:15:57 by cmckelvy         ###   ########.fr       */
+/*   Created: 2020/06/30 14:53:06 by cmckelvy          #+#    #+#             */
+/*   Updated: 2020/06/30 14:55:17 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sorcerer.hpp"
-#include "Peon.hpp"
-#include <iostream>
+#include "PlasmaRifle.hpp"
 
-int main(void)
+PlasmaRifle::PlasmaRifle(void) : AWeapon("Plasma Rifle", 5, 21) { }
+PlasmaRifle::PlasmaRifle(const PlasmaRifle &cpy) : AWeapon(cpy) { }
+PlasmaRifle::~PlasmaRifle(void) { }
+
+void	PlasmaRifle::attack(void) const
 {
-    Sorcerer robert("Robert", "the Magnificent");
-    Victim jim("Jimmy");
-    Peon joe("Joe");
-    std::cout << robert << jim << joe;
-    robert.polymorph(jim);
-    robert.polymorph(joe);
-    return 0;
-
+	std::cout << "* piouuu piouuu piouuu *" << std::endl;
 }
