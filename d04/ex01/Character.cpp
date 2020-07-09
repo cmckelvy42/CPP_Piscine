@@ -52,7 +52,7 @@ void				Character::attack(Enemy* enemy)
 	{
 		if (_weapon == NULL || enemy == NULL)
 			return ;
-		if (_ap < _weapon->getAPCost())
+		if (_ap < _weapon->getAPCost() || enemy->getHP() <= 0)
 			return ;
 		PRINT(_name << " attacks " << enemy->getType() << " with a " << _weapon->getName());
 		_weapon->attack();

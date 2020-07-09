@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 14:44:40 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/07/01 14:22:52 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/07/08 18:20:44 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class SuperMutant : public Enemy
 	public:
 		SuperMutant(void);
 		SuperMutant(const SuperMutant &cpy);
-		virtual ~SuperMutant(void);
+		~SuperMutant(void);
 		
 		using Enemy::operator=;
 

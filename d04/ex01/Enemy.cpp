@@ -20,8 +20,6 @@
 		Enemy::Enemy(const Enemy &cpy)
 		{ *this = cpy; }
 		
-		Enemy::~Enemy(void) { }
-		
 		Enemy&	Enemy::operator = (const Enemy &old)
 		{
 			_hp = old.getHP();
@@ -39,5 +37,7 @@
 		{
 			if (dmg < 0)
 				dmg = 0;
-			_hp = _hp - dmg > 0 ? _hp - dmg : 0; 
+			_hp = _hp - dmg > 0 ? _hp - dmg : 0;
+			if (_hp <= 0)
+				delete this;
 		}

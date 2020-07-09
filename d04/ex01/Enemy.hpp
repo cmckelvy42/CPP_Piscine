@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 15:03:38 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/07/01 14:25:41 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/07/08 18:26:06 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Enemy
 		Enemy(void);
 		Enemy(int hp, std::string const & type);
 		Enemy(const Enemy &cpy);
-		virtual ~Enemy();
+		virtual ~Enemy() {};
 
 		Enemy&	operator = (const Enemy &old);
 		

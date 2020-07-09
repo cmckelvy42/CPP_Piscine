@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 14:53:06 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/07/01 14:25:44 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/07/08 18:06:54 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ SuperMutant::~SuperMutant(void)
 void	SuperMutant::takeDamage(int dmg)
 		{
 			dmg -= 3;
-			if (dmg < 0)
+			if (dmg < 0 && _hp)
 				dmg = 0;
-			_hp = _hp - dmg > 0 ? _hp - dmg : 0; 
+			_hp = _hp - dmg > 0 ? _hp - dmg : 0;
 		}
 

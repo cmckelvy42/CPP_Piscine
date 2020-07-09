@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 14:44:40 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/07/01 14:24:32 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/07/08 18:21:10 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ class RadScorpion : public Enemy
 	public:
 		RadScorpion(void);
 		RadScorpion(const RadScorpion &cpy);
-		virtual ~RadScorpion(void);
+		~RadScorpion(void);
 		
 		using Enemy::operator=;
 };
