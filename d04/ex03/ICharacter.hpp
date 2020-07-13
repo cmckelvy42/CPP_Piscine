@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/19 11:23:12 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/07/08 17:53:05 by cmckelvy         ###   ########.fr       */
+/*   Created: 2020/07/12 15:07:47 by cmckelvy          #+#    #+#             */
+/*   Updated: 2020/07/12 17:32:28 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sorcerer.hpp"
-#include "Peon.hpp"
+#ifndef ICHARACTER_HPP
+#define ICHARACTER_HPP
 #include <iostream>
+#include "AMateria.hpp"
 
-int main(void)
+class AMateria;
+
+class ICharacter
 {
-    Sorcerer robert("Robert", "the Magnificent");
-    Victim jim("Jimmy");
-    Peon joe("Joe");
-    std::cout << robert << jim << joe;
-    robert.polymorph(jim);
-    robert.polymorph(joe);
-    return 0;
-
-}
+public:
+	virtual ~ICharacter() {}
+	virtual std::string const & getName() const = 0;
+	virtual void equip(AMateria* m) = 0;
+	virtual void unequip(int idx) = 0;
+	virtual AMateria* getInventory(int idx) const = 0;
+	virtual void use(int idx, ICharacter& target) = 0;
+};
+#endif

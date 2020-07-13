@@ -5,23 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/19 11:23:12 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/07/08 17:53:05 by cmckelvy         ###   ########.fr       */
+/*   Created: 2020/07/10 15:06:48 by cmckelvy          #+#    #+#             */
+/*   Updated: 2020/07/10 15:42:27 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Sorcerer.hpp"
-#include "Peon.hpp"
-#include <iostream>
-
-int main(void)
+#include "AssaultTerminator.hpp"
+#include "TacticalMarine.hpp"
+#include "Squad.hpp"
+int main()
 {
-    Sorcerer robert("Robert", "the Magnificent");
-    Victim jim("Jimmy");
-    Peon joe("Joe");
-    std::cout << robert << jim << joe;
-    robert.polymorph(jim);
-    robert.polymorph(joe);
-    return 0;
+	ISpaceMarine* bob = new TacticalMarine;
+	ISpaceMarine* jim = new AssaultTerminator;
+	ISquad* vlc = new Squad;
 
+	vlc->push(bob);
+	vlc->push(jim);
+	for (int i = 0; i < vlc->getCount(); ++i)
+	{
+		ISpaceMarine* cur = vlc->getUnit(i);
+		cur->battleCry();
+		cur->rangedAttack();
+		cur->meleeAttack();
+	}
+	std::cout << std::endl;
+	ISpaceMarine* rick = new TacticalMarine;
+	*rick = *bob;
+	rick->battleCry();
+	delete rick;
+	delete vlc;
+	return 0;
 }
