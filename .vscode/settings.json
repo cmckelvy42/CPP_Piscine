@@ -82,6 +82,9 @@
 		"ios": "cpp",
 		"locale": "cpp",
 		"queue": "cpp",
-		"stack": "cpp"
+		"stack": "cpp",
+		"concepts": "cpp",
+		"ranges": "cpp",
+		"stop_token": "cpp"
 	}
 }

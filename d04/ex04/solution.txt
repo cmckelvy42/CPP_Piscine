@@ -1,0 +1,6 @@
+this exercise doesn't need to be done as it's worth 0 points and I'm very tired atm, but the solution is using an 
+overloaded function for either the lasers (mine functions for both asteroids and comets) or the mining 
+targets(asteroids and comets each have a beMined function for both laser types)
+
+just wanted to show I know how to do this simple problem to justify not spending the time on a project
+that exists solely as a learning challenge
