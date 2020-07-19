@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 14:52:22 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/01/21 14:54:59 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/07/18 17:13:54 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	RobotomyRequestForm& operator = (const RobotomyRequestForm &old);
 
 	std::string	getTarget(void)				const;
-	void		execute(Bureaucrat const &) const;
+	std::string	execute(Bureaucrat const &) const;
 };
 
 #endif

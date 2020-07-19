@@ -6,38 +6,42 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 13:49:09 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/07/18 16:35:51 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/07/18 16:54:41 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Intern.hpp"
+#include "OfficeBlock.hpp"
 
 #define PRINT(x) std::cout << x << std::endl
 #define CATCH catch (std::exception& e) { PRINT(e.what()); }
 
-int	main()
+int main()
 {
-	Intern intern;
-	Bureaucrat bcrat = Bureaucrat("test", 1);
-
-	Form* sf;
-	Form* rf;
-	Form* pf;
-	Form* nf;
+	Intern idiotOne;
+	Bureaucrat hermes = Bureaucrat("Hermes Conrad", 46);
+	Bureaucrat bob = Bureaucrat("Bobby Bobson", 73);
+	OfficeBlock ob;
+	ob.setIntern(idiotOne);
+	ob.setSigner(bob);
+	ob.setExecutor(hermes);
 	try
 	{
-		sf = intern.makeForm("shrubbery creation", "shrubs");
-		rf = intern.makeForm("robotomy request", "robots");
-		pf = intern.makeForm("presidential pardon", "everyone");
-		nf = intern.makeForm("invalid", "form");
+		ob.doBureaucracy("robotomy request", "Bender");
+		bob.upGrade();
+		ob.doBureaucracy("robotomy request", "Bender");
+		hermes.upGrade();
+		ob.doBureaucracy("robotomy request", "Bender");
 	}
-	CATCH;
-	bcrat.signForm(*sf);
-	bcrat.executeForm(*sf);
-	bcrat.signForm(*pf);
-	bcrat.executeForm(*pf);
-	bcrat.signForm(*rf);
-	bcrat.executeForm(*rf);
-	static_cast <void> (nf);
-	return (0);
+	catch (std::exception & e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+	catch (std::string ex)
+	{
+		std::cout << ex << std::endl;
+	}
+	catch (...)
+	{
+		std::cout << "unkown error" << std::endl;
+	}
 }

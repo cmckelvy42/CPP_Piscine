@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 12:55:38 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/07/16 11:16:42 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/07/18 17:17:27 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,12 +72,12 @@ void	Bureaucrat::executeForm(Form const &form)
 {
 	try
 	{
-		form.execute(*this);
+		std::cout << form.execute(*this) << std::endl;
 		std::cout << _name << " executed " << form.getName() << std::endl;
 	}
 	catch (std::exception& e)
 	{
-		std::cout << e.what() << std::endl;
+		std::cout << _name << " cannot execute " << form.getName() << " because " << e.what() << std::endl;
 	}
 }
 

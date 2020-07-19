@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 14:51:14 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/07/16 11:41:13 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/07/18 17:13:57 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,16 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &cpy) : Form(
 RobotomyRequestForm::~RobotomyRequestForm(void) { }
 RobotomyRequestForm&	RobotomyRequestForm::operator = (const RobotomyRequestForm &) { return (*this); }
 
-void	RobotomyRequestForm::execute(Bureaucrat const &b) const
+std::string	RobotomyRequestForm::execute(Bureaucrat const &b) const
 {
 	if (this->getSigned())
 	{
 		if (b.getGrade() <= this->getGradeToExecute())
 		{
 			if (rand() % 2)
-				std::cout << _target << " has been robotomized successfully" << std::endl;
+				return (_target + " has been robotomized successfully" );
 			else
-				std::cout << _target << " the robotomization has failed" << std::endl;
+				return (_target + " the robotomization has failed");
 		}
 		else
 			throw GradeTooLowException();

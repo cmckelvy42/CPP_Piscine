@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 15:14:10 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/01/21 15:17:46 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/07/18 17:14:08 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	ShrubberyCreationForm& operator = (const ShrubberyCreationForm &old);
 
 	std::string	getTarget(void)				const;
-	void		execute(Bureaucrat const &) const;
+	std::string	execute(Bureaucrat const &) const;
 };
 
 #endif

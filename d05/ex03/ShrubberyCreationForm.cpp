@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 15:14:36 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/07/16 11:40:16 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/07/18 17:14:47 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ ShrubberyCreationForm&	ShrubberyCreationForm::operator = (const ShrubberyCreatio
 
 std::string	ShrubberyCreationForm::getTarget(void)	const	{ return (_target); }
 
-void		ShrubberyCreationForm::execute(Bureaucrat const &b) const
+std::string	ShrubberyCreationForm::execute(Bureaucrat const &b) const
 {
 	if (this->getSigned())
 	{
@@ -60,7 +60,7 @@ void		ShrubberyCreationForm::execute(Bureaucrat const &b) const
 				<< "                  `-'  `-'`-'-'" << std::endl;
 			}
 			os.close();
-			std::cout << "shrubbery created" << std::endl;
+			return ("shrubbery created");
 		}
 		else
 			throw GradeTooLowException();

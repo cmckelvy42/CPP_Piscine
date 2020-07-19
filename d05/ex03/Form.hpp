@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 13:33:17 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/01/21 15:04:50 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/07/18 17:16:24 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ public:
 	~Form(void);
 	Form&	operator = (const Form &old);
 
-	virtual void	execute(Bureaucrat const &) const = 0;
+	virtual std::string	execute(Bureaucrat const &) const = 0;
 	
 	std::string	getName(void)			const;
 	bool		getSigned(void)			const;

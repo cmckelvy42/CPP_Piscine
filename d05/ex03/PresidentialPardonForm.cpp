@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 14:48:41 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/01/21 15:09:43 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/07/18 17:12:36 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,13 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &cpy
 PresidentialPardonForm::~PresidentialPardonForm(void) { }
 PresidentialPardonForm&	PresidentialPardonForm::operator = (const PresidentialPardonForm &) { return (*this); }
 
-void	PresidentialPardonForm::execute(Bureaucrat const &brc) const
+std::string	PresidentialPardonForm::execute(Bureaucrat const &brc) const
 {
 	if (this->getSigned())
 	{
 		if (brc.getGrade() <= this->getGradeToExecute())
-			std::cout << brc.getName() << " has been pardoned by Zaphod Beeblebrox" << std::endl;
+			return (brc.getName() + " has been pardoned by Zaphod Beeblebrox");
+
 		else
 			throw GradeTooLowException();
 	}

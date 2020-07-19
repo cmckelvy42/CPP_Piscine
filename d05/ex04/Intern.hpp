@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/15 18:47:04 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/07/17 18:28:18 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/07/17 18:28:06 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ public:
 	Intern&	operator = (const Intern &old);
 
 	Form	*makeForm(std::string name, std::string target);
+
 	class	InvalidFormException : public std::exception
 	{
 	public:

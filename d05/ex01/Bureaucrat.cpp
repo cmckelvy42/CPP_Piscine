@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 12:55:38 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/01/21 14:01:49 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/07/18 16:52:12 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,8 @@ void		Bureaucrat::signForm(Form &frm)
 {
 	try
 	{
+		std::cout << _name << " executed " << frm.getName() << std::endl;
 		frm.beSigned(*this);
-		std::cout << _name << " signs " << frm.getName() << std::endl;
 	}
 	catch (std::exception& e)
 	{

@@ -6,7 +6,7 @@
 /*   By: cmckelvy <cmckelvy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/21 12:42:10 by cmckelvy          #+#    #+#             */
-/*   Updated: 2020/01/21 14:40:24 by cmckelvy         ###   ########.fr       */
+/*   Updated: 2020/07/18 17:07:49 by cmckelvy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ public:
 	void		upGrade(void);
 	void		downGrade(void);
 	void		signForm(Form &frm);
-	void		executeForm(Form const &frm);
+	void	executeForm(Form const &frm);
 
 	class	GradeTooHighException : public std::exception
 	{
